@@ -17,10 +17,10 @@ def emotion_detector_endpoint():
 
     result = emotion_detector(text_to_analyze)
     formatted = (
-        f"For this statement response is 'anger': {result['anger']},"
-        f"'disgust': {result['disgust']}, 'fear': {result['fear']},"
-        f"'joy': {result['joy']}, 'sadness': {result['sadness']}."
-        f"Dominant emotion is: {result['dominant_emotion']}."
+        f"For the given statement, the system response is 'anger': {result['anger']}, "
+        f"'disgust': {result['disgust']}, 'fear': {result['fear']}, "
+        f"'joy': {result['joy']}, and 'sadness': {result['sadness']}. "
+        f"The dominant emotion is {result['dominant_emotion']}."
     )
     return jsonify(result=result, formatted=formatted)
 
